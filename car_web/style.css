@@ -1,0 +1,201 @@
+body{
+    background-color: black;
+}
+
+
+
+
+
+
+
+/* Styles for the header */
+header {
+    background-color: white; /* Background color for the header */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space between logo and navigation */
+    align-items: center; /* Align items vertically */
+    padding: 20px; /* Add padding for spacing */
+    height: auto;
+    
+}
+#login{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for the navigation menu */
+nav ul {
+    list-style-type: none; /* Remove default list styles */
+    display: flex; /* Use flexbox for layout */
+}
+
+nav ul li {
+    margin: 0 20px; /* Add margin between menu items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set text color */
+    font-size: 25px; /* Set font size */
+    font-family: 'Helvetica', sans-serif; /* Set professional font */
+    position: relative; /* Position relative for pseudo-element */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for the hover effect on menu items */
+nav ul li a::after {
+    content: ''; /* Add content for pseudo-element */
+    position: absolute; /* Position absolute for pseudo-element */
+    bottom: -5px; /* Position pseudo-element below the link */
+    left: 0; /* Position pseudo-element at the start of the link */
+    width: 0%; /* Initially set width to 0 */
+    height: 2px; /* Set height for pseudo-element */
+    background-color: black; /* Set background color for pseudo-element */
+    transition: width 0.3s; /* Add transition effect */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand pseudo-element width on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for sub-menus */
+nav ul li:hover > ul {
+    display: block; /* Display sub-menu on hover */
+}
+
+nav ul ul {
+    display: none; /* Hide sub-menu by default */
+    position: absolute; /* Position absolute for sub-menu */
+    background-color: blanchedalmond; /* Background color for sub-menu */
+     /* Add padding for spacing */
+}
+
+nav ul ul li {
+    margin: 10px 0; /* Add margin for spacing between sub-menu items */
+}
+
+
+
+
+
+
+
+
+
+/* Styles for the logo */
+#logo {
+    display: block;
+    margin:1 auto;
+    width: 500px; /* Set maximum width for the logo */
+    height: auto; /* Set maximum height for the logo */
+}
+
+
+
+
+
+
+
+
+
+/* Styles for the video container */
+#video-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+/* Styles for the video player */
+#video-player {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for the button container */
+.button-container {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for the transparent buttons */
+.transparent-button {
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.transparent-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
