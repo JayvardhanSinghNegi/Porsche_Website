@@ -9,7 +9,3 @@ function openMerchandisePage() {
 function openModelsPage() {
     window.open('https://www.porsche.com/middle-east/_india_/modelstart/all/', '_blank');
 }
-
-function openloginpage() {
-    window.open('https://www.porsche.com/middle-east/_india_/modelstart/all/', '_blank');
-}
