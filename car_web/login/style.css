@@ -1,172 +1,148 @@
+@font-face {
+  font-family: 'PorscheNext';
+  src: url('fonts/PorscheNext-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    height: 80px;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#logo {
-    display: block;
-    margin: 0 auto;
+  font-family: 'PorscheNext', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: #000;
 }
 
 .container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
+  width: 100%;
 }
 
-.image-container {
-    flex: 1;
+.left-side {
+  flex: 1;
+  background-image: url('imgs/Porsche 911 Turbo Vintage Racing Car Poster under 35$ 2.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.right-side {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative; /* <-- Add this */
 }
+
 
 .form-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.form-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-container p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.button-primary {
+  width: 100%;
+  padding: 14px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.button-secondary {
+  width: 100%;
+  padding: 14px;
+  background: none;
+  border: 1px solid #000;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.alt-option {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.alt-option a {
+  color: #000;
+  text-decoration: underline;
+}
+
+
+/* Right side header with logo and home */
+.right-header {
+  position: absolute; /* <-- Add this */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+
+.logo {
+  width: 160px;
+  height: auto;
+}
+
+.home-link {
+  display: inline-block;
+}
+
+.home-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.home-icon:hover {
+  transform: scale(1.1);
 }
 
 
 
-.form label {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
 
-/* Existing CSS styles... */
-
-.form {
-    max-width: 400px;
-    width: 100%;
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px;
-    background-color: transparent;
-    border-radius: 8px;
-    margin-bottom: 50%;
-}
-
-.form h1 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.input-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align input boxes */
-    margin-bottom: 20px;
-    
-}
-
-.form input[type="text"],
-.form input[type="password"],
-.form input[type="text"] {
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
-
-.button-container {
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Center align button */
-}
-
-.form button {
-    width: 50%;
-    padding: 20px;
-    background-color: #ff5b13;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 20px;
-}
-
-.form button:hover {
-    background-color: #ff720e;
-
-}
-
-.welcome-text {
-    text-align: center;
-    font-size: 30px;
-    color: #333;
-}
-
-/* Adjusting layout for smaller screens */
-@media (max-width: 600px) {
-    .input-container {
-        width: 100%; /* For smaller screens, make the input container take full width */
-    }
-
-    .button-container {
-        width: 100%; /* For smaller screens, make the button container take full width */
-    }
-
-    .form button {
-        width: 100%; /* Make button take full width on smaller screens */
-    }
-}
-
-
-
-#captcha{
-    width: 20%;
-}
-#placeholdertxt{
-    font-size: 50px;
-} 
-.form input[type="text"]::placeholder,
-.form input[type="password"]::placeholder {
-    font-size: 30px; /* Increase the placeholder text size */
-}
-#captcha-image{
-    width: 50%;
-    height: auto;
-}
-
-
-.signup-container {
-    display: flex;
-    align-items: center;  /* Align text and button vertically */
-    justify-content: space-between; /* Distribute elements with space in between */
-    margin-top: 10%;  /* Add some space above the signup section */
-    
-  }
-  
-  .signup-container p {
-    margin: 0;  /* Remove default margin for cleaner styling */
-    font-size: 25px;  /* Adjust font size for the text */
-    color: #333;  /* Set text color */
-  }
-  
-  .signup-container button {
-    background-color: transparent;
-    border: none;  /* Remove default button border */
-    cursor: pointer;  /* Indicate clickable behavior */
-    color: black;  /* Set button text color */
-    font-size: 16px;  /* Adjust font size for the button */
-    text-decoration: underline;  /* Add underline for emphasis */
-    transition: none;
-    font-size: 25px;
-  }
