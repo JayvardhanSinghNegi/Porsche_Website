@@ -1,125 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taycan</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taycan</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <header class="main-header">
+    <img src="imgs/pl.png" alt="Porsche Logo" class="logo" />
+  </header>
+
+  <section class="hero">
+    <img src="imgs/cover.jpeg" alt="GT3 RS Cover" class="hero-img" />
+    <div class="overlay-text">
+      <h2>The Taycan</h2>
+    </div>
+  </section>
+
+  <section id="gallery-section">
+    <div class="gallery-container">
+      <img src="imgs/int1.jpeg" alt="1" class="gallery-item active" />
+      <img src="imgs/int2.jpeg" alt="2" class="gallery-item" />
+      <img src="imgs/int3.jpeg" alt="3" class="gallery-item" />
+      <img src="imgs/int4.jpeg" alt="4" class="gallery-item" />
+      <img src="imgs/int5.jpeg" alt="5" class="gallery-item" />
+      <img src="imgs/int6.jpeg" alt="6" class="gallery-item" />
+      <img src="imgs/int7.jpeg" alt="7" class="gallery-item" />
+      <video class="gallery-item" autoplay muted loop>
+        <source src="imgs/int_vid.webm" type="video/mp4" />
+      </video>
+    </div>
+    <div class="gallery-controls">
+      <button id="prev-button" class="gallery-btn">&#9664; Previous</button>
+      <button id="next-button" class="gallery-btn">Next &#9654;</button>
+    </div>
+  </section>
   
 
-<header>
-    <img id="logo" src="imgs/pl.png" alt="Logo">
-</header>
-
-
-
-
-
-<div id="model1" class="image-container">
-    <img src="imgs/cover.jpeg" alt="coverimg">
-    <div class="overlay-text">The Taycan</div>
-</div>
-
-
-
-
-
-
-<div id="gallery-section">
-  <div class="gallery-container">
-      <img src="imgs//int1.jpeg" alt="Image 1" class="gallery-item active">
-      <img src="imgs//int2.jpeg" alt="Image 2" class="gallery-item">
-      <img src="imgs//int3.jpeg" alt="Image 2" class="gallery-item">
-      <img src="imgs//int4.jpeg" alt="Image 2" class="gallery-item">
-      <img src="imgs//int5.jpeg" alt="Image 2" class="gallery-item">
-      <img src="imgs//int6.jpeg" alt="Image 2" class="gallery-item">
-      <img src="imgs//int7.jpeg" alt="Image 2" class="gallery-item">
-      <video class="gallery-item" autoplay muted loop>
-          <source src="imgs/int_vid.webm" type="video/mp4">
-          
-      </video>
-  </div>
-  <button id="next-button">Next</button>
-</div>
-
-
-
-
-
-
-
-
-<div id="info-section">
-    <h1 id="heading_info">Technical Specifications</h1>
-    <div class="button-container">
-        <button id="button1">> Specifications</button>
-        <button id="button2">> Features</button>
-        <button id="button3">> Performance</button>
+  <section id="info-section">
+    <h2>Technical Specifications</h2>
+    <div class="specification-cards">
+      <div class="spec-card" id="spec-engine">
+        <h3>Engine</h3>
+        <p>4.0L Naturally Aspirated</p>
+      </div>
+      <div class="spec-card" id="spec-performance">
+        <h3>Performance</h3>
+        <p>520 hp, 3.2 sec 0-60 mph</p>
+      </div>
+      <div class="spec-card" id="spec-features">
+        <h3>Features</h3>
+        <p>Carbon Fiber Hood, Alcantara Interior</p>
+      </div>
     </div>
-    <div id="display-info"></div>
-</div>
+    <div id="display-info" class="spec-details">
+      <p>Select a category to see detailed specifications.</p>
+    </div>
+  </section>
+  
 
+  <section class="image-overlay">
+    <img src="imgs/pwr.jpeg" alt="Spoiler" />
+    <div class="overlay-text">
+      <h3>Energetic. From every perspective.</h3>
+    </div>
+  </section>
 
+  <section class="image-overlay">
+    <img src="imgs/rear.webp" alt="Rear" />
+    <div class="overlay-text">
+      <h3>Electric Pioneer. In terms of sound too.</h3>
+    </div>
+  </section>
 
-
-
-
-<div class="image-overlay">
-    <img src="imgs/pwr.jpeg" alt="Spoiler" id="spoiler">
-    <div class="overlay-text"><h3>Energetic. From every perspective.</h3></div>
-</div>
-
-<div class="image-overlay">
-    <img src="imgs/rear.webp" alt="Rear" id="rear">
-    <div class="overlay-text">Electric Pioneer.In terms of sound too.</div>
-</div>
-
-<div class="image-overlay">
-    <img src="imgs/4door.jpeg" alt="Rear" id="rear">
-    <div class="overlay-text">A four door with a top speed of 260 mph</div>
-</div>
-
-
-
-
-
-
-
-
-<div class="video-container">
-    <video id="video-player" autoplay muted loop>
-        <source src="imgs/cover.mp4" type="video/mp4" id="vid">
+  <section class="video-container">
+    <video autoplay muted loop>
+      <source src="imgs/cover.mp4" type="video/mp4" />
     </video>
-    <div class="video-overlay">
-        <h3>The overwhelming feeling of sitting in an amazing electric sports car: the new Taycan makes electricity even more electrifying. Performance even more impressive. And the extraordinary even more outstanding.Dreams are the strongest motivation. With the Taycan, we have carried this belief over into the realm of electromobility – and have opened a new chapter: Porsche E-Performance.
-        </h3>
+    <div class="overlay-text">
+      <p>The overwhelming feeling of sitting in an amazing electric sports car: the new Taycan makes electricity even more electrifying. Performance even more impressive. And the extraordinary even more outstanding.</p>
     </div>
-</div>
+  </section>
 
-
-
-
-
-
-<footer>
-    <div class="contact-details">
-        <h2>Contact Details</h2>
-        <ul>
-            <li>Email: info@porsche.com</li>
-            <li>Phone: +1 (800) PORSCHE</li>
-            <li>Address: 123 Porsche Street, Stuttgart, Germany</li>
-        </ul>
+  <footer>
+    <div class="footer-content">
+      <p class="tagline">Driven by Dreams. Engineered for Excellence.</p>
+      <div class="footer-links">
+        <a href="https://www.porsche.com/usa/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.porsche.com/usa/legal-notice/" target="_blank">Legal Notice</a>
+        <a href="https://www.porsche.com/usa/contactandinformation/contact/" target="_blank">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/porsche/" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/user/Porsche" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/porsche/" target="_blank">Facebook</a>
+      </div>
+      <p class="copyright">© 2025 Porsche AG. All rights reserved.</p>
     </div>
-</footer>
+  </footer>
 
 
-
-
-
-
-<script src="script.js"></script>    
+  <script src="script.js"></script>
 </body>
 </html>

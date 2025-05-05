@@ -1,92 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porsche</title>
-     <link rel="stylesheet" href="car_web/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Porsche</title>
+  <link rel="stylesheet" href="car_web/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-   
-    
-    
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#" onclick="openModelsPage()">Configurator</a></li>
-                <li><a href="#" onclick="openMerchandisePage()">Merchandise</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="car_web/login/login.html" target="_blank" ><img src="car_web/user.png" alt="login" id="login"></a></li>
-            </ul>
-        </nav>
-        <img id="logo" src="car_web/logo/pl.png" alt="Starter Logo">
-    </header>
-    
-    
-    
-    
-    
-    <!-- Video container -->
-    <div id="video-container">
-        <video id="video-player" autoplay muted loop>
-            <source src="car_web/trailer/gt3rs.mp4" type="video/mp4">
-        </video>
-        <!-- Buttons on top of the video -->
-        <div class="button-container">
-            <button class="transparent-button" onclick="openCarPage('car_web/911gt3rs/models.html')">Discover the new 911 GT3 RS</button>
-            <button class="transparent-button" onclick="openCarPage('car_web/car1.html')">Book Test Ride</button>
-        </div>
+  <header>
+    <img id="logo" src="car_web/logo/pl.png" alt="Starter Logo" />
+    <nav>
+      <ul>
+        <li><a href="#" onclick="openModelsPage()">Configurator</a></li>
+        <li><a href="#" onclick="openMerchandisePage()">Merchandise</a></li>
+        <li><a href="#">Service</a></li>
+        <li>
+          <a href="car_web/login/login.html" target="_blank">
+            <img src="car_web/user.png" alt="login" id="login" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="video-section">
+      <video class="video-player" autoplay muted loop>
+        <source src="car_web/trailer/gt3rs.mp4" type="video/mp4" />
+      </video>
+      <div class="button-container">
+        <button class="transparent-button" onclick="openCarPage('car_web/911gt3rs/models.html')">Discover the new 911 GT3 RS</button>
+        <button class="transparent-button" onclick="openCarPage('car1.html')">Book Test Ride</button>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <video class="video-player" autoplay muted loop>
+        <source src="car_web/trailer/macan.mp4" type="video/mp4" />
+      </video>
+      <div class="button-container">
+        <button class="transparent-button" onclick="openCarPage('car_web/macan/models.html')">Discover the all new 2024 MACAN</button>
+        <button class="transparent-button" onclick="openCarPage('car2.html')">Book Test Ride</button>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <video class="video-player" autoplay muted loop>
+        <source src="car_web/trailer/missionx.mp4" type="video/mp4" />
+      </video>
+      <div class="button-container">
+        <button class="transparent-button" onclick="openCarPage('car_web/missionx/models.html')">The Future of PORSCHE</button>
+        <button class="transparent-button" onclick="openCarPage('car3.html')">Book Test Ride</button>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <video class="video-player" autoplay muted loop>
+        <source src="car_web/trailer/tachan.mp4" type="video/mp4" />
+      </video>
+      <div class="button-container">
+        <button class="transparent-button" onclick="openCarPage('car_web/taycan/models.html')">Discover the Taycan</button>
+        <button class="transparent-button" onclick="openCarPage('car4.html')">Book Test Ride</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="car_web/script.js"></script>
+
+  <footer>
+    <div class="footer-content">
+      <p class="tagline">Driven by Dreams. Engineered for Excellence.</p>
+      <div class="footer-links">
+        <a href="https://www.porsche.com/usa/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.porsche.com/usa/legal-notice/" target="_blank">Legal Notice</a>
+        <a href="https://www.porsche.com/usa/contactandinformation/contact/" target="_blank">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/porsche/" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/user/Porsche" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/porsche/" target="_blank">Facebook</a>
+      </div>
+      <p class="copyright">© 2025 Porsche AG. All rights reserved.</p>
     </div>
-    
-    
-    
-    
-    
-    <div id="video-container">
-        <video id="video-player" autoplay muted loop>
-            <source src="car_web/trailer/macan.mp4" type="video/mp4">
-        </video>
-        <!-- Buttons on top of the video -->
-        <div class="button-container">
-            <button class="transparent-button" onclick="openCarPage('car_web/macan/models.html')">Discover the all new 2024 MACAN</button>
-            <button class="transparent-button" onclick="openCarPage('car_web/car2.html')">Book Test Ride</button>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-   
-    <div id="video-container">
-        <video id="video-player" autoplay muted loop>
-            <source src="car_web/trailer/missionx.mp4" type="video/mp4">
-        </video>
-        <!-- Buttons on top of the video -->
-        <div class="button-container">
-            <button class="transparent-button" onclick="openCarPage('car_web/missionx/models.html')">The Future of PORSCHE</button>
-            <button class="transparent-button" onclick="openCarPage('car_web/car3.html')">Book Test Ride</button>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    
-  
-    <div id="video-container">
-        <video id="video-player" autoplay muted loop>
-            <source src="car_web/trailer/tachan.mp4" type="video/mp4">
-        </video>
-        <!-- Buttons on top of the video -->
-        <div class="button-container">
-            <button class="transparent-button" onclick="openCarPage('car_web/taycan/models.html')">Discover the Taycan</button>
-            <button class="transparent-button" onclick="openCarPage('car_web/car4.html')">Book Test Ride</button>
-        </div>
-    </div>
-    
-    <script src="car_web/script.js"></script>
-   
+  </footer>
+
+
+
 </body>
 </html>

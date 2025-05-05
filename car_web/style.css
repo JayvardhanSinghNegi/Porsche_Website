@@ -1,201 +1,162 @@
-body{
-    background-color: black;
-}
-
-
-
-
-
-
-
-/* Styles for the header */
-header {
-    background-color: white; /* Background color for the header */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Distribute space between logo and navigation */
-    align-items: center; /* Align items vertically */
-    padding: 20px; /* Add padding for spacing */
+@font-face {
+    font-family: 'PorscheNext';
+    src: url('fonts/PorscheNext-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #000;
+    font-family: 'PorscheNext', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 18px;
+  }
+  
+  /* Header */
+  header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+  }
+  
+  #logo {
+    width: 220px;
     height: auto;
-    
-}
-#login{
-    width: 30px;
-    height: 30px;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Styles for the navigation menu */
-nav ul {
-    list-style-type: none; /* Remove default list styles */
-    display: flex; /* Use flexbox for layout */
-}
-
-nav ul li {
-    margin: 0 20px; /* Add margin between menu items */
-}
-
-nav ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: black; /* Set text color */
-    font-size: 25px; /* Set font size */
-    font-family: 'Helvetica', sans-serif; /* Set professional font */
-    position: relative; /* Position relative for pseudo-element */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Styles for the hover effect on menu items */
-nav ul li a::after {
-    content: ''; /* Add content for pseudo-element */
-    position: absolute; /* Position absolute for pseudo-element */
-    bottom: -5px; /* Position pseudo-element below the link */
-    left: 0; /* Position pseudo-element at the start of the link */
-    width: 0%; /* Initially set width to 0 */
-    height: 2px; /* Set height for pseudo-element */
-    background-color: black; /* Set background color for pseudo-element */
-    transition: width 0.3s; /* Add transition effect */
-}
-
-nav ul li a:hover::after {
-    width: 100%; /* Expand pseudo-element width on hover */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Styles for sub-menus */
-nav ul li:hover > ul {
-    display: block; /* Display sub-menu on hover */
-}
-
-nav ul ul {
-    display: none; /* Hide sub-menu by default */
-    position: absolute; /* Position absolute for sub-menu */
-    background-color: blanchedalmond; /* Background color for sub-menu */
-     /* Add padding for spacing */
-}
-
-nav ul ul li {
-    margin: 10px 0; /* Add margin for spacing between sub-menu items */
-}
-
-
-
-
-
-
-
-
-
-/* Styles for the logo */
-#logo {
-    display: block;
-    margin:1 auto;
-    width: 500px; /* Set maximum width for the logo */
-    height: auto; /* Set maximum height for the logo */
-}
-
-
-
-
-
-
-
-
-
-/* Styles for the video container */
-#video-container {
+  }
+  
+  #login {
+    width: 28px;
+    height: 28px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    letter-spacing: 0.5px;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Video Section */
+  .video-section {
     position: relative;
     width: 100%;
-    margin: 0 auto;
-}
-
-
-
-
-
-
-
-
-/* Styles for the video player */
-#video-player {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .video-player {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Styles for the button container */
-.button-container {
+  }
+  
+  /* Button Overlay */
+  .button-container {
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Styles for the transparent buttons */
-.transparent-button {
-    padding: 15px 30px;
+  }
+  
+  .transparent-button {
+    padding: 12px 28px;
     background-color: transparent;
     border: 2px solid #fff;
     color: #fff;
-    font-size: 40px;
-    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-family: 'PorscheNext', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
     border-radius: 5px;
     margin: 10px;
     cursor: pointer;
-}
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .transparent-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+  
 
-.transparent-button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
+
+  footer {
+    background-color: #0c0c0c;
+    padding: 40px 20px;
+    color: #ccc;
+    text-align: center;
+    font-family: 'PorscheNext', 'Helvetica Neue', sans-serif;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .footer-content .tagline {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .footer-links,
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 10px 0;
+  }
+  
+  .footer-links a,
+  .footer-socials a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover,
+  .footer-socials a:hover {
+    color: white;
+  }
+  
+  footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+  }
+  
